@@ -102,11 +102,6 @@ class orbital:
         self.m = tuple_list[3]
         self.orbital_type = tuple_list[4]
 
-cc_pVnZ = ['cc-pVDZ', 'cc-pVTZ', 'cc-pVQZ', 'cc-pV5Z', 'cc-pV6Z']
-aug_cc_pVnZ = ['aug-cc-pVDZ', 'aug-cc-pVTZ', 'aug-cc-pVQZ', 'aug-cc-pV5Z', 'aug-cc-pV6Z']
-atom_list = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne']
-
-# for i in ['H']:
-#     for j in cc_pVnZ:
-#         for orbital_name in basis_set(i, j).wfn():
-#             print(orbital_name, '\nalpha\n', basis_set(i, j).wfn()[orbital_name][0], '\nconcn\n', basis_set(i, j).wfn()[orbital_name][1])
+# cc_pVnZ = ['cc-pVDZ', 'cc-pVTZ', 'cc-pVQZ', 'cc-pV5Z', 'cc-pV6Z']
+# aug_cc_pVnZ = ['aug-cc-pVDZ', 'aug-cc-pVTZ', 'aug-cc-pVQZ', 'aug-cc-pV5Z', 'aug-cc-pV6Z']
+# atom_list = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne']
