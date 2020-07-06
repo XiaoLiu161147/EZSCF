@@ -536,7 +536,7 @@ def get_ak(tuple_I, tuple_J, tuple_K, tuple_L):
             if (l_I + l_J + k_IJ) % 2 == 0:
                 gaunt_IJ_sum = 0
                 for q_IJ in range(-k_IJ, k_IJ + 1):
-                    gaunt_IJ_temp = gaunt(l_I,k_IJ,l_J,-m_I,q_IJ,m_J) * pow(-1, 2*l_I-m_I)
+                    gaunt_IJ_temp = gaunt(l_I,k_IJ,l_J,-m_I,-q_IJ,m_J) * pow(-1, 2*l_I-m_I)
                     gaunt_IJ_sum += gaunt_IJ_temp
                 tuple_IJ = l_I,m_I,l_J,m_J,k_IJ,gaunt_IJ_sum
                 tuple_IJ_list.append(tuple_IJ)
