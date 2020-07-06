@@ -109,11 +109,3 @@ class basis_set:
                 wfn[sto_type] = alpha_array, concn_array
 
         return wfn
-
-class orbital:
-    def __init__(self, tuple_list):
-        self.index = tuple_list[0]
-        self.n = tuple_list[1]
-        self.l = tuple_list[2]
-        self.m = tuple_list[3]
-        self.orbital_type = tuple_list[4]
