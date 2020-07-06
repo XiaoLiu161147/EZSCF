@@ -49,7 +49,7 @@ class basis_set:
 
     def __init__(self, atom, basis_set_name):
         self.atom = atom
-        self.basis_set_name = basis_set_name
+        self.basis_set_name = re.sub('\*', '_st_', basis_set_name)
 
     def atom_bs(self):
         return self.atom + '_' + re.sub('-', '_', self.basis_set_name)
@@ -117,7 +117,3 @@ class orbital:
         self.l = tuple_list[2]
         self.m = tuple_list[3]
         self.orbital_type = tuple_list[4]
-
-# cc_pVnZ = ['cc-pVDZ', 'cc-pVTZ', 'cc-pVQZ', 'cc-pV5Z', 'cc-pV6Z']
-# aug_cc_pVnZ = ['aug-cc-pVDZ', 'aug-cc-pVTZ', 'aug-cc-pVQZ', 'aug-cc-pV5Z', 'aug-cc-pV6Z']
-# atom_list = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne']
