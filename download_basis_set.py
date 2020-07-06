@@ -31,14 +31,15 @@ session = HTMLSession()
 
 def download_basis_set(atom_num, basis_set_name):
     atom_name = periodic_table[atom_num-1]
-    api = 'http://www.basissetexchange.org/api/basis/' + basis_set_name + '/format/bdf/?version=1&elements=' + str(atom_num)
+    basis_set_name_in_url = re.sub('\*', '_st_', basis_set_name)
+    api = 'http://www.basissetexchange.org/api/basis/' + basis_set_name_in_url + '/format/bdf/?version=1&elements=' + str(atom_num)
     r = session.get(api)
     content = r.html.html
 
     pattern = '\*\*\*\*' + '(?:.|\n)*'
     text = re.findall(pattern, content)
 
-    txt_name = atom_name + '_' + re.sub('-', '_', basis_set_name) + '.txt'
+    txt_name = atom_name + '_' + re.sub('-', '_', basis_set_name_in_url) + '.txt'
     open_txt = open(txt_name, mode='w')
 
     if text == []:
