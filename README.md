@@ -1,6 +1,8 @@
 # EZSCF
+
 EZSCF is the name of this purely Python-based RHF/RMP2 program of atomic systems, mainly used for the bachelor's thesis of Xiao Liu @ BNU.
 The name EZSCF is a homophone with "Easy SCF" and also a pun on the initial Chinese Pinyin letters of Xiao's beloved Alma Mater, Hangzhou No.2 High School (aka 杭州二中 or HZEZ).
+
 Differing from widely used Cartesian GTO basis set, this program applies Spherical Harmonic GTO basis set so as to evaluate high angular momentum terms of the electron integrals more efficiently and accurately in a recursion-free way.
 
 EZSCF is developed by Xiao Liu under the guidance of Prof. Zhendong Li @ BNU. All references are marked in different places of the program.
